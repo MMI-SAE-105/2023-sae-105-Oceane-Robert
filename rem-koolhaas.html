@@ -39,17 +39,46 @@ x-data="{
             <h3>Récompenses et héritage</h3>
             <p>Sa capacité à repousser les frontières de l'architecture et à inspirer de nouvelles façons de penser continue de faire de lui une figure majeure dans le monde de la création et de l'innovation, laissant un impact durable et influent sur l'avenir de l'architecture moderne.</p>
         </div>
-        <div>
-            <div
+        <div class="accordeon">
+            <div class="accordeon__btn"
                 aria-controls="mainNav" 
                 @click="bouton1 = ! bouton1">
                 <p>chronologie</p>
                 <h3>des oeuvres</h3>
-        </div>
-                <img    src="public/img/chronologie.webp" alt="chronologie des oeuvres "
+            </div>
+                <img class="accordeon__img"   src="public/img/chronologie.webp" alt="chronologie des oeuvres "
                 id="mainNav" x-show="bouton1" x-transition.duration.900ms
                 >
         </div>
     </main>
+    <footer class="footer">
+        <img src="public/icons/logo.svg" alt="">
+        <a href="">EN</a>
+            <div class="footer__menu">
+                <nav>
+                <ul class="footer__list list-unstyled">
+                    <li><a href="conservatoire.html">Accueil</a></li>
+                    <li><a href="#">Billeterie</a></li>
+                    <li><a href="agenda.html">Contact</a></li>
+                </ul>
+                </nav>
+            </div>
+            <div class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
+                <address class="footer__mail">
+                  <a href="mailto:oceane.robert72@gmail.com">oceane.robert72@gmail.com</a>
+                </address>
+              </div>
+            <div class="footer__reseaux">
+                <ul class="footer__list list-unstyled">
+                    <li class="footer__item"><a href="https://www.facebook.com/"><img src="public/icons/facebook.svg" alt="logo facebook"></a></li>
+                    <li class="footer__item"><a href="https://www.instagram.com/"><img src="public/icons/instagram.svg" alt="logo instagram"></a></li>
+                    <li class="footer__item"><a href="https://twitter.com/"><img src="public/icons/twitter.svg" alt="logo twitter"></a></li>
+                    <li class="footer__item"><a href="https://youtube.com/"><img src="public/icons/youtube.svg" alt="logo youtube"></a></li>
+                    <li class="footer__mmi"><a href="https://mmimontbeliard.com/"><img src="public/icons/logo-mmi.svg" alt="logo MMI"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

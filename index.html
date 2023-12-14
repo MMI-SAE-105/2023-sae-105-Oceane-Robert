@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
     <title>Accueil</title>
 </head>
 <body>
@@ -44,10 +45,141 @@
                 <h1 class="hero__title">de la forme à la fonction</h1>
             </div>
         </div>
-        <section class="information container">
-            <header>
-
+        <section class="présentation container">
+            <header class="presentatio__header">
+                <h2 class="presentation__title">Exposition sur Rem Koolhaas</h2>
+                <p class="presentation__text">
+                    <li>Du 13 juin au 23 luin 2024</li>
+                    <li>Plus de 8 oeuvres emblématiques exposés</li>
+                    <li>Exposé à la Fondation Cartier pour l'art contemporain</li>
+                </p>
             </header>
+            <div class="presentation__architecte">
+                <img src="public/img/portrait_RemKoolhaas 1.webp" alt="portrait de l'architecte">
+                <h2 class="presentation__architecte-title">Rem Koolhaas</h2>
+                <blockquote class="presentation__citation">
+                    <p class="presentation__citation-text">“L'ascenseur est une autoprophétie: Plus il va loin, plus ce qu'il laisse derrière lui devient indésirable.”</p>
+                    <footer class="presentation__citation-livre"><cite>Delirious New York</cite></footer>
+                </blockquote>
+                <a href="">En savoir plus</a>
+            </div>
+            <div class="carrousel" x-data="{
+                hrefCourant: '#ecran-1',
+                hrefCourant: '#ecran-2',
+                hrefCourant: '#ecran-3',
+                hrefCourant: '#ecran-4',
+                hrefCourant: '#ecran-5',
+                hrefCourant: '#ecran-6',
+                hrefCourant: '#ecran-7',
+                hrefCourant: '#ecran-8',
+            }">
+                <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
+                    &lt;
+                </button>
+                <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant" @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth">
+                    &gt;
+                </button>
+                <div class="carrousel_parent-ecrans" x-ref="parent"
+                @scroll.debounce.250ms.passive="
+                hrefCourant = '#'+
+                                  [...$refs.parent.children]
+                                   .find(e=>e.getBoundingClientRect( ).x>=0)
+                                   .id
+                                                     ">
+                    <div id="ecran-1" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/av_imagen_vertical.webp" alt="image ecran 1">
+                            <div>
+                            <figcaption class="caroussel_text">cctv headquarters</figcaption>
+                            <a href="">en savoir plus</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div id="ecran-2" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/Seattle-Central-Library_11-scaled-2160x1440 (1).webp" alt="image ecran 2">
+                            <div>
+                            <figcaption class="caroussel_text">bibliothèque seathle</figcaption>
+                            <a href="">en savoir plus</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div id="ecran-3" class="carrousel_ecran">
+                        <figure>
+                            <div>
+                            <img src="public/img/Fondazione_PRADA_,_Via_Ripamonti_-_Largo_Isarco_area,_Golden_Tower_Rem_Koolhass_design.webp" alt="image ecran 3">
+                            <figcaption class="caroussel_text">fondation prada</figcaption>
+                            <a href="">en savoir plus</a>
+                            </div>
+                        </figure>
+                    </div>
+                    <div id="ecran-4" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/rotterdam.webp" alt="image ecran 4">
+                            <figcaption class="caroussel_text">de rotterdam</figcaption>
+                            <a href="">en savoir plus</a>
+                        </figure>
+                    </div>
+                    <div id="ecran-5" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/bordeaux.webp" alt="image ecran 5">
+                            <figcaption class="caroussel_text">maison de bordeaux</figcaption>
+                            <a href="">en savoir plus</a>
+                        </figure>
+                    </div>
+                    <div id="ecran-6" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
+                            <figcaption class="caroussel_text">casa de musica</figcaption>
+                            <a href="">en savoir plus</a>
+                        </figure>
+                    </div>
+                    <div id="ecran-7" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
+                            <figcaption class="caroussel_text">casa de musica</figcaption>
+                            <a href="">en savoir plus</a>
+                        </figure>
+                    </div>
+                    <div id="ecran-8" class="carrousel_ecran">
+                        <figure>
+                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
+                            <figcaption class="caroussel_text">casa de musica</figcaption>
+                            <a href="">en savoir plus</a>
+                        </figure>
+                    </div>
+                </div>
+                <ul class="caroussel_liste-liens">
+                    <span><a href="#ecran-1" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></span>
+                    <span><a href="#ecran-2" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></span>
+                    <span><a href="#ecran-3" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></span>
+                    <span><a href="#ecran-4" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></span>
+                    <span><a href="#ecran-5" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></span>
+                </ul>
+            </div>
+           
+        </section>
+        <section>
+            <div>
+                <h2>Horaire</h2>
+                <ul>
+                    <li>Tous les jours de 11h à 20h, sauf le lundi.</li>
+                    <li>Nocturne le mardi, jusqu'à 22h.</li>
+                    <li>La fermeture des salles débute à 19h45 (21h45 les mardis).</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Tarifs</h2>
+                <p>Plein tarifs =</p>
+                <p>11€</p>
+                <p>Réductionn 13 - 25 ans =</p>
+                <p>5€</p>
+                <p>Fondation Cartier Pass =</p>
+                <p>18€ - 50€</p>
+                <p>Moins de 1" ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants</p>
+                <img src="" alt="flèche noir">
+                <p>Gratuit</p>
+            </div>
         </section>
     </main>
 </body>

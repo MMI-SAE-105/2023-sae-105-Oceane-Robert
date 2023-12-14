@@ -1,0 +1,90 @@
+.caroussel_text{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  img {
+    display: block;
+    max-width: 85%;
+    margin: 0 auto;
+    height: auto;
+  }
+  
+  .carrousel_parent-ecrans {
+    display: flex;
+    width: 100% ;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .carrousel_ecran {
+    flex: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carrousel_ecran figure {
+    margin: 0;
+  }
+
+  .carrousel {
+    position: relative;
+  }
+  
+  .carrousel_btn {
+    position: absolute;
+    top: 30%;
+    top: calc(
+      min(500px, 60vw) / 16 * 9 / 2 + 1rem
+    ); 
+    transform: translateY(-50%); 
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: 30%;
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #fff;
+  }
+  
+  .carrousel_btn-avant {
+    left: 0;
+  }
+  
+  .carrousel_btn-apres {
+    right: 0;
+  }
+ 
+  .caroussel_liste-liens {
+    justify-content: center;
+    display: flex; 
+    justify-self: center;
+    margin-left: 0 auto; 
+    padding: none ; 
+    list-style: none ; 
+    gap: 2rem; 
+    align-items: center;
+  }
+
+  .caroussel_lien {
+    color: #F5F7C3;
+    border-radius: 50%;
+    border: 1px solid #fff; 
+    padding: 0.5rem 1rem;
+  }
+
+
+  .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    cursor: pointer;
+    background-color: #0000ff; /* ou toute autre couleur pour les points non actifs */
+  }
+
+  .carousel-indicators .active {
+    background-color: #ffff00; /* ou toute autre couleur pour le point actif */
+  }
+  

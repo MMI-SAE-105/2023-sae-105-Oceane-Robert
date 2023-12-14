@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr"
+x-data="{
+    bouton1: false,
+}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <main>
-        <h1>rem koolhaas</h1>
+        <div class="container">
+            <h1>rem koolhaas</h1>
+            <p>Rem Koolhaas, né le 17 novembre 1944 à Rotterdam, est un architecte visionnaire, écrivain et théoricien reconnu mondialement pour sa capacité à repenser l'architecture et l'urbanisme contemporains. Son influence transcende les frontières de l'architecture pour s'étendre à d'autres domaines tels que la culture, la politique et la sociologie.</p>
+            <figure>
+            <img src="public/img/8e57bad_1649260097949-2ftmp-2f8e0811cf-3563-41f5-bfcf-e3175a45d06b 1.webp" alt="paysage Rem">
+            <figcaption>légende</figcaption>
+            </figure>
+            <h3>Éduction et influences</h3>
+            <p>Élevé aux Pays-Bas, Koolhaas a étudié l'architecture à l'Architectural Association School de Londres et à l'université Cornell aux États-Unis, où il a été profondément influencé par des figures intellectuelles telles que Colin Rowe et Oswald Mathias Ungers. Cette formation a façonné sa pensée novatrice et son approche interdisciplinaire de l'architecture.</p>
+            <h3>Fondation de l'OMA</h3>
+            <p>En 1975, il fonde l'Office for Metropolitan Architecture (OMA) à Rotterdam, établissant ainsi le cadre pour son exploration créative et conceptuelle de l'architecture. Koolhaas et OMA ont rapidement acquis une renommée mondiale pour leur approche non conventionnelle, remettant en question les normes établies et repoussant les limites de la discipline architecturale.</p>
+            <figure>
+                <img src="public/img/oma 1.webp" alt="OMA">
+                <figcaption>Logo de la fondation OMA</figcaption>
+            </figure>
+            <h3>Approche et renommée</h3>
+            <p>Parmi ses œuvres les plus emblématiques figurent la Casa da Música à Porto, la Fondation Prada à Milan, la Bibliothèque publique de Seattle, et la CCTV Headquarters à Pékin. Chacun de ces projets reflète la vision avant-gardiste de Koolhaas, fusionnant fonctionnalité, esthétique et innovation.</p>
+            <h3>Oeuvres emblématiques</h3>
+            <p>En plus de sa pratique architecturale, Koolhaas est un auteur prolifique. Son ouvrage "Delirious New York", publié en 1978, est devenu un texte fondateur pour de nombreux architectes. Ses écrits continuent d'influencer la pensée architecturale contemporaine en explorant les interactions complexes entre l'architecture, la culture et la société.</p>
+            <figure>
+                <img src="public/img/new york 1.webp" alt="delirous new york">
+                <figcaption>Delirious New York</figcaption>
+            </figure>
+            <h3>Oeuvres littéraire</h3>
+            <p>Koolhaas a reçu de nombreuses récompenses prestigieuses tout au long de sa carrière, dont le Prix Pritzker en 2000, l'une des plus hautes distinctions dans le domaine de l'architecture. Son héritage va bien au-delà de ses réalisations architecturales remarquables, étant considéré comme un pionnier qui a redéfini la manière dont nous percevons et construisons nos environnements urbains.</p>
+            <h3>Récompenses et héritage</h3>
+            <p>Sa capacité à repousser les frontières de l'architecture et à inspirer de nouvelles façons de penser continue de faire de lui une figure majeure dans le monde de la création et de l'innovation, laissant un impact durable et influent sur l'avenir de l'architecture moderne.</p>
+        </div>
+        <div>
+            <div
+                aria-controls="mainNav" 
+                @click="bouton1 = ! bouton1"
+                >
+                <p>chronologie</p>
+                <h3>des oeuvres</h3>
+            </div>
+                <img    src="public/img/chronologie 2.webp" alt="chronologie des oeuvres "
+                id="mainNav" x-show="bouton1" x-transition.duration.900ms
+                >
+        </div>
     </main>
 </body>
 </html>

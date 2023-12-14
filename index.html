@@ -78,93 +78,93 @@
                 hrefCourant: '#ecran-4',
                 hrefCourant: '#ecran-5',
             }">
-                <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
+                <button class="carrousel__btn carrousel__btn-avant" aria-label="slide précedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
                     &lt;
                 </button>
-                <button class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant" @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth">
+                <button class="carrousel__btn carrousel__btn-apres" aria-label="slide suivant" @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth">
                     &gt;
                 </button>
-                <div class="carrousel_parent-ecrans" x-ref="parent"
+                <div class="carrousel__parent-ecrans" x-ref="parent"
                 @scroll.debounce.250ms.passive="
                 hrefCourant = '#'+
                                   [...$refs.parent.children]
                                    .find(e=>e.getBoundingClientRect( ).x>=0)
                                    .id
                                                      ">
-                    <div id="ecran-1" class="carrousel_ecran">
+                    <div id="ecran-1" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/av_imagen_vertical.webp" alt="image ecran 1">
                             <div>
-                            <p class="caroussel_text">cctv headquarters</p>
+                            <p class="caroussel__text">cctv headquarters</p>
                             <a href="">en savoir plus</a>
                             </div>
                         </figure>
                     </div>
-                    <div id="ecran-2" class="carrousel_ecran">
+                    <div id="ecran-2" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/Seattle-Central-Library_11-scaled-2160x1440.webp" alt="image ecran 2">
                             <div>
-                            <p class="caroussel_text">bibliothèque seathle</p>
+                            <p class="caroussel__text">bibliothèque seathle</p>
                             <a href="">en savoir plus</a>
                             </div>
                         </figure>
                     </div>
-                    <div id="ecran-3" class="carrousel_ecran">
+                    <div id="ecran-3" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/Fondazione_PRADA_,_Via_Ripamonti_-_Largo_Isarco_area,_Golden_Tower_Rem_Koolhass_design.webp" alt="image ecran 3">
                             <div>
-                            <p class="caroussel_text">fondation prada</p>
+                            <p class="caroussel__text">fondation prada</p>
                             <a href="">en savoir plus</a>
                             </div>
                         </figure>
                     </div>
-                    <div id="ecran-4" class="carrousel_ecran">
+                    <div id="ecran-4" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/rotterdam.webp" alt="image ecran 4">
                             <div>
-                            <p class="caroussel_text">de rotterdam</p>
+                            <p class="caroussel__text">de rotterdam</p>
                             <a href="">en savoir plus</a>
                             </div>
                         </figure>
                     </div>
-                    <div id="ecran-5" class="carrousel_ecran">
+                    <div id="ecran-5" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/bordeaux.webp" alt="image ecran 5">
-                            <p class="caroussel_text">maison de bordeaux</p>
+                            <p class="caroussel__text">maison de bordeaux</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
-                    <div id="ecran-6" class="carrousel_ecran">
+                    <div id="ecran-6" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/casa-de-musica-petit.webp" alt="image ecran 6">
-                            <p class="caroussel_text">casa de musica</p>
+                            <p class="caroussel__text">casa de musica</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
-                    <div id="ecran-7" class="carrousel_ecran">
+                    <div id="ecran-7" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/Rotterdam_kunsthal_achterzijde.webp" alt="image ecran 7">
-                            <p class="caroussel_text">kunsthal</p>
+                            <p class="caroussel__text">kunsthal</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
-                    <div id="ecran-8" class="carrousel_ecran">
+                    <div id="ecran-8" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/5184cd654d3e19db430918958e47e24bd70306b7-3072x2712.webp" alt="image ecran 8">
-                            <p class="caroussel_text">boompjes 60-68</p>
+                            <p class="caroussel__text">boompjes 60-68</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
                 </div>
-                <ul class="caroussel_liste-liens">
-                    <li><a href="#ecran-1" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
-                    <li><a href="#ecran-2" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
-                    <li><a href="#ecran-3" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
-                    <li><a href="#ecran-4" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
-                    <li><a href="#ecran-5" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
-                    <li><a href="#ecran-6" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
-                    <li><a href="#ecran-7" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
-                    <li><a href="#ecran-8" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
+                <ul class="caroussel__liste-liens">
+                    <li><a href="#ecran-1" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
+                    <li><a href="#ecran-2" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
+                    <li><a href="#ecran-3" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
+                    <li><a href="#ecran-4" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
+                    <li><a href="#ecran-5" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
+                    <li><a href="#ecran-6" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
+                    <li><a href="#ecran-7" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
+                    <li><a href="#ecran-8" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
                 </ul>
             </div>
            

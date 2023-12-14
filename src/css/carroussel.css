@@ -1,4 +1,4 @@
-.caroussel_text{
+.caroussel__text{
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -9,7 +9,7 @@
     height: auto;
   }
   
-  .carrousel_parent-ecrans {
+  .carrousel__parent-ecrans {
     display: flex;
     width: 100% ;
     overflow-x: scroll;
@@ -17,13 +17,13 @@
     scroll-behavior: smooth;
   }
   
-  .carrousel_ecran {
+  .carrousel__ecran {
     flex: none;
     width: 100%;
     box-sizing: border-box;
   }
   
-  .carrousel_ecran figure {
+  .carrousel__ecran figure {
     margin: 0;
   }
 
@@ -31,12 +31,9 @@
     position: relative;
   }
   
-  .carrousel_btn {
+  .carrousel__btn {
     position: absolute;
-    top: 30%;
-    top: calc(
-      min(500px, 60vw) / 16 * 9 / 2 + 1rem
-    ); 
+    top: 50%;
     transform: translateY(-50%); 
     width: 2rem;
     height: 2rem;
@@ -48,15 +45,15 @@
     color: #000;
   }
   
-  .carrousel_btn-avant {
+  .carrousel__btn-avant {
     left: 0;
   }
   
-  .carrousel_btn-apres {
+  .carrousel__btn-apres {
     right: 0;
   }
  
-  .caroussel_liste-liens {
+  .caroussel__liste-liens {
     justify-content: center;
     display: flex; 
     justify-self: center;
@@ -68,7 +65,7 @@
     margin-top: 20px; 
   }
 
-  .caroussel_lien {
+  .caroussel__lien {
     color: #F5F7C3;
     border: 1px solid #fff; 
     padding: 0.5rem 1rem;
@@ -86,19 +83,19 @@
     overflow: hidden;
   }
   
-  .carrousel_parent-ecrans {
+  .carrousel__parent-ecrans {
     display: flex;
     width: 100%;
     transition: transform 0.3s ease; 
   }
   
-  .carrousel_ecran {
+  .carrousel__ecran {
     flex: none;
     width: 100%;
     scroll-snap-align: start; 
   }
   
-  .caroussel_liste-liens a.actif {
+  .caroussel__liste-liens a.actif {
     background-color: #000; 
   }
   

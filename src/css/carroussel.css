@@ -45,7 +45,7 @@
     border: none;
     display: grid;
     place-content: center;
-    color: #fff;
+    color: #000;
   }
   
   .carrousel_btn-avant {
@@ -65,26 +65,41 @@
     list-style: none ; 
     gap: 2rem; 
     align-items: center;
+    margin-top: 20px; 
   }
 
   .caroussel_lien {
     color: #F5F7C3;
-    border-radius: 50%;
     border: 1px solid #fff; 
     padding: 0.5rem 1rem;
-  }
-
-
-  .carousel-indicators li {
-    display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 1px;
+    border-radius: 50%;
+    margin: 0 5px; 
     cursor: pointer;
-    background-color: #0000ff; /* ou toute autre couleur pour les points non actifs */
+    background-color: #aaa; 
   }
 
-  .carousel-indicators .active {
-    background-color: #ffff00; /* ou toute autre couleur pour le point actif */
+  .carrousel {
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
   }
+  
+  .carrousel_parent-ecrans {
+    display: flex;
+    width: 100%;
+    transition: transform 0.3s ease; 
+  }
+  
+  .carrousel_ecran {
+    flex: none;
+    width: 100%;
+    scroll-snap-align: start; 
+  }
+  
+  .caroussel_liste-liens a.actif {
+    background-color: #000; 
+  }
+  
   

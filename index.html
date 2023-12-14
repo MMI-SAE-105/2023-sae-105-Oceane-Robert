@@ -71,15 +71,12 @@
                 </blockquote>
                 <a href="">En savoir plus</a>
             </div>
-            <div class="carrousel" x-data="{
+            <div x-data="{
                 hrefCourant: '#ecran-1',
                 hrefCourant: '#ecran-2',
                 hrefCourant: '#ecran-3',
                 hrefCourant: '#ecran-4',
                 hrefCourant: '#ecran-5',
-                hrefCourant: '#ecran-6',
-                hrefCourant: '#ecran-7',
-                hrefCourant: '#ecran-8',
             }">
                 <button class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
                     &lt;
@@ -139,32 +136,35 @@
                     </div>
                     <div id="ecran-6" class="carrousel_ecran">
                         <figure>
-                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
+                            <img src="public/img/casa-de-musica-petit.webp" alt="image ecran 6">
                             <p class="caroussel_text">casa de musica</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
                     <div id="ecran-7" class="carrousel_ecran">
                         <figure>
-                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
-                            <p class="caroussel_text">casa de musica</p>
+                            <img src="public/img/Rotterdam_kunsthal_achterzijde.webp" alt="image ecran 7">
+                            <p class="caroussel_text">kunsthal</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
                     <div id="ecran-8" class="carrousel_ecran">
                         <figure>
-                            <img src="public/img/vue de loin de la casa de musica.webp" alt="image ecran 6">
-                            <p class="caroussel_text">casa de musica</p>
+                            <img src="public/img/5184cd654d3e19db430918958e47e24bd70306b7-3072x2712.webp" alt="image ecran 8">
+                            <p class="caroussel_text">boompjes 60-68</p>
                             <a href="">en savoir plus</a>
                         </figure>
                     </div>
                 </div>
                 <ul class="caroussel_liste-liens">
-                    <span><a href="#ecran-1" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></span>
-                    <span><a href="#ecran-2" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></span>
-                    <span><a href="#ecran-3" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></span>
-                    <span><a href="#ecran-4" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></span>
-                    <span><a href="#ecran-5" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></span>
+                    <li><a href="#ecran-1" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
+                    <li><a href="#ecran-2" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
+                    <li><a href="#ecran-3" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
+                    <li><a href="#ecran-4" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
+                    <li><a href="#ecran-5" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
+                    <li><a href="#ecran-6" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
+                    <li><a href="#ecran-7" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
+                    <li><a href="#ecran-8" class="caroussel_lien" :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
                 </ul>
             </div>
            

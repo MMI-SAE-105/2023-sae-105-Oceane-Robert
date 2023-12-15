@@ -11,3 +11,52 @@
     background: #FAF5E9;
 }
 
+.tarifs__title {
+    text-align: center;
+    justify-content: center;
+}
+
+.tarifs__prix {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.tarifs__chiffre {
+    font-weight: bold;
+}
+
+.lieu__title {
+    text-align: center;
+}
+
+.lieu__adresse {
+    position: absolute; 
+    right: 0;
+    background: #FAF5E9;
+    text-align: right;
+    transform: translateY(-5%);
+    z-index: 1;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.lieu__adresse p {
+    justify-content: column;
+    font-weight: bold;
+
+}
+
+.information__lieu img {
+    position: absolute;
+    z-index: -1;
+}
+
+.information__lieu {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 222px;
+
+}
+

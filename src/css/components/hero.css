@@ -1,9 +1,5 @@
 .hero__header {
     position: relative;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     padding-bottom: var(--space5x);
   }
   
@@ -23,20 +19,31 @@
   }
   
   .hero__sub-title {
-    font-family: var(--font-sans-serif);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: var(--text-sm);
     font-weight: bold;
-    line-height: 1.8;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .hero__date-exposition {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-left: 55px;
   }
+
+
 
   .hero__title {
     text-transform: uppercase;
+    width: 329px;
+    height: 76px;
+  }
+
+  .hero__fleche {
+    position: relative;
+    color: #FFF1D0;
   }
   

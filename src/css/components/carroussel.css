@@ -2,7 +2,7 @@
   font-family: 'helvetica';
 }
 
-  img {
+  .carroussel img {
     display: block;
     max-width: 85%;
     margin: 0 auto;
@@ -29,28 +29,6 @@
 
   .carrousel {
     position: relative;
-  }
-  
-  .carrousel__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); 
-    width: 2rem;
-    height: 2rem;
-    background: rgba(0,0,0,0.5);
-    border-radius: 30%;
-    border: none;
-    display: grid;
-    place-content: center;
-    color: #000;
-  }
-  
-  .carrousel__btn-avant {
-    left: 0;
-  }
-  
-  .carrousel__btn-apres {
-    right: 0;
   }
  
   .caroussel__liste-liens {

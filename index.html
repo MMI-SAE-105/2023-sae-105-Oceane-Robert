@@ -8,7 +8,7 @@
     <title>Accueil</title>
 </head>
 <body>
-    <header class="header container"
+    <header class="header"
     @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
     :class="{ 'header--atTop' : !atTop }">
         <div class="header__start">
@@ -57,8 +57,8 @@
                 <div class="hero__img duotone"><img src="public/img/rem-koolhaas-2012_grey.webp" alt="violoncelles"></div>
             </div>
         </div>
-        <section class="presentation container">
-            <header class="presentatio__header">
+        <section class="presentation">
+            <header class="presentatio__header container">
                 <h2 class="presentation__title">Exposition sur Rem Koolhaas</h2>
                 <ul class="presentation__text">
                     <li>Du 13 juin au 23 luin 2024</li>
@@ -235,13 +235,14 @@
             <div class="footer__menu">
                 <nav>
                 <ul class="footer__list list-unstyled">
-                    <li><a href=".html">Accueil</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
                     <li><a href="#">Billeterie</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 </nav>
             </div>
             <div class="footer__contact">
+                <h3 class="footer__title">Contact</h3>
                 <address class="footer__mail">
                   <a href="mailto:oceane.robert72@gmail.com">oceane.robert72@gmail.com</a>
                 </address>

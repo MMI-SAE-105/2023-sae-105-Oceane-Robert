@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
     <script defer="" src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-    <title>Maison de Bordeau</title>
+    <title>Accueil</title>
 </head>
 <body>
-    <header class="header container">
+    <header class="header"
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
         <div class="header__start">
             <a href="/">
                 <img class="header__logo" src="public/icons/logo.svg" alt="logo de l'exposition de Rem Koolhaas">
             </a>
         </div>
 
-        <div class="header__end">
-            <a class="header__menu-link" href="">EN</a>
+        <div class="header__end" class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+        @pointerdown="menuIsOpen = !menuIsOpen" 
+        :class="menuIsOpen && 'menu-btn--open'">
+            <button class="header__menu-link" href="">EN</buttton>
             <button class="header__menu-btn menu-btn">
                 <span class="menu-btn__bar"></span>
             </button>
 
-            <nav class="header__menu menu">
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <ul class="menu__list list-unstyled">
-                <li class="menu__item"><a class="menu__link" href="index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href=".../index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="">Billeterie</a></li>
                 <li class="menu__item"><a class="menu__link" href="rem-koolhaas.html">Rem Koolhaas</a></li>
                 <li class="menu__item"><a class="menu__link" href="maison-bordeau.html">La maison de bordeau</a></li>
@@ -75,19 +79,20 @@
         </div>
     </main>
     <footer class="footer">
+        <div class="footer__logo">
         <img src="public/icons/logo.svg" alt="">
         <a href="">EN</a>
+        </div>
             <div class="footer__menu">
                 <nav>
                 <ul class="footer__list list-unstyled">
-                    <li><a href="conservatoire.html">Accueil</a></li>
+                    <li><a href=".html">Accueil</a></li>
                     <li><a href="#">Billeterie</a></li>
-                    <li><a href="agenda.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 </nav>
             </div>
             <div class="footer__contact">
-                <h3 class="footer__title">Contact</h3>
                 <address class="footer__mail">
                   <a href="mailto:oceane.robert72@gmail.com">oceane.robert72@gmail.com</a>
                 </address>
@@ -101,7 +106,6 @@
                     <li class="footer__mmi"><a href="https://mmimontbeliard.com/"><img src="public/icons/logo-mmi.svg" alt="logo MMI"></a></li>
                 </ul>
             </div>
-        </div>
     </footer>
 </body>
 </html>

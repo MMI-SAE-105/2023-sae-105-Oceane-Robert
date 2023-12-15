@@ -12,12 +12,18 @@
 .presentation__architecte img {
     width: 113px;
     height: 155px;
+    float: right;
+    margin: 10px;
 }
 
 .presentation__details {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 60%;
+    margin: 20px;
+    margin-left: 0;
+    text-align: left;
 }
 
 .presentation__details > * {
@@ -28,4 +34,9 @@
 .blockquote {
     margin-left: 10px;
     padding-left: 10px;
+    padding-right: 15px;
 }
+
+
+
+

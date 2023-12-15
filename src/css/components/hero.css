@@ -17,7 +17,6 @@
   .hero__title,
   .hero__sub-title {
     position: relative;
-    z-index: 2;
     color: #FFF1D0;
     text-align: center;
     display:flex;

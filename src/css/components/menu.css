@@ -34,8 +34,8 @@
     content: "";
     display: block;
     border-bottom: 1px solid white;
-    width: 0%; /* Ajustez cette valeur pour contrôler la longueur de la bordure */
-    margin: auto; /* Centrer la bordure */
+    width: 10%; 
+    margin: auto; 
 }
 
   

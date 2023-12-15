@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,9 @@
     <title>Accueil</title>
 </head>
 <body>
-    <header class="header container">
+    <header class="header container"
+    @scroll.window="atTop = ( window.scrollY > 100 ? false : true )"
+    :class="{ 'header--atTop' : !atTop }">
         <div class="header__start">
             <a href="/">
                 <img class="header__logo" src="public/icons/logo.svg" alt="logo de l'exposition de Rem Koolhaas">
@@ -21,7 +23,7 @@
                 <span class="menu-btn__bar"></span>
             </button>
 
-            <nav class="header__menu menu">
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
                 <ul class="menu__list list-unstyled">
                 <li class="menu__item"><a class="menu__link" href=".../index.html">Accueil</a></li>
                 <li class="menu__item"><a class="menu__link" href="">Billeterie</a></li>

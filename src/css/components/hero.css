@@ -1,0 +1,42 @@
+.hero__header {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: var(--space5x);
+  }
+  
+  .hero__img {
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    z-index: 0;
+  }
+  
+  .hero__title,
+  .hero__sub-title {
+    position: relative;
+    z-index: 1;
+    color: #FFF1D0;
+    text-align: center;
+  }
+  
+  .hero__sub-title {
+    font-family: var(--font-sans-serif);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: var(--text-sm);
+    font-weight: bold;
+    line-height: 1.8;
+  }
+
+  .hero__date-exposition {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero__title {
+    text-transform: uppercase;
+  }
+  

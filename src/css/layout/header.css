@@ -22,9 +22,16 @@
 .header__menu-link {
     color: white;
     text-decoration: none;
+    width: 40px;
+    border: 0;
+    background: transparent;
 }
 
 .header--atTop .header__search {
     filter: none;
   }
   
+.header__end {
+    display: flex;
+   justify-content: space-between;
+}

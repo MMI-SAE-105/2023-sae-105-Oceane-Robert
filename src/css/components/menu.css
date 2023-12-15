@@ -15,13 +15,12 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
     letter-spacing: var(--letter-spacing);
     transition: all .4s ease-in-out;
   }
-  /* On se sert de Javascript pour ajouter une classe sur le menu lorsqu'on clique sur le bouton de menu pour le faire apparaître */
+  
   .menu--open {
     visibility: visible;
     opacity: 1;
   }
   
-  /* Mise en forme des éléments du menu */
   .menu__list {
     margin-top: 25vh;
     margin-left: 15vw;
@@ -36,8 +35,6 @@ On ajoute les propriétés "visibility: hidden" et "opacity: 0" pour masquer le 
     text-decoration: none;
   }
   
-  
-  /* Mise en forme du bouton de menu "Hamburger" */
   .menu-btn {
     position: relative;
     z-index: 3;

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page non trouvée</title>
+</head>
+<body>
+  <div class="erreur">
+    <h1>404</h1>
+    <p>Désolé, la page que vous recherchez est introuvable.</p>
+  </div>
+  <form action="http://rem-koolhass.oceanerobert.fr" method="GET" 
+    x-data="{ q:'', }" 
+    x-on:submit="q = q + ' site:mmimontbeliard.com'"
+    class="form">
+    <label for="q">Texte à chercher :</label>
+    <input type="text" id="q" name="q" x-model="q">
+    <button type="submit">Rechercher</button>
+</form>
+</body>
+</html>
+

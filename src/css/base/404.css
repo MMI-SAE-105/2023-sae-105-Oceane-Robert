@@ -1,0 +1,44 @@
+.erreur>p {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .erreur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .erreur>h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .erreur>p {
+    font-size: 1.2em;      
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .erreur>form{
+    position: absolute;
+    bottom: 20px;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }

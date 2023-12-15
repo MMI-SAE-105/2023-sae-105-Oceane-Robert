@@ -5,6 +5,7 @@
 .hero__header {
     position: relative;
     padding-bottom: 130px;
+    overflow: hidden;
   }
   
   .hero__img {

@@ -2,7 +2,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
-  img {
+  .carroussel__img {
     display: block;
     max-width: 85%;
     margin: 0 auto;

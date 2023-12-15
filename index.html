@@ -17,7 +17,9 @@
             </a>
         </div>
 
-        <div class="header__end">
+        <div class="header__end" class="header__menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"
+        @pointerdown="menuIsOpen = !menuIsOpen" 
+        :class="menuIsOpen && 'menu-btn--open'">
             <button class="header__menu-link" href="">EN</buttton>
             <button class="header__menu-btn menu-btn">
                 <span class="menu-btn__bar"></span>
@@ -138,29 +140,37 @@
                     <div id="ecran-5" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/bordeaux.webp" alt="image ecran 5">
+                            <div>
                             <p class="caroussel__text">maison de bordeaux</p>
                             <a href="">en savoir plus</a>
+                            </div>
                         </figure>
                     </div>
                     <div id="ecran-6" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/casa-de-musica-petit.webp" alt="image ecran 6">
+                            <div>
                             <p class="caroussel__text">casa de musica</p>
                             <a href="">en savoir plus</a>
+                            </div>
                         </figure>
                     </div>
                     <div id="ecran-7" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/Rotterdam_kunsthal_achterzijde.webp" alt="image ecran 7">
+                            <div>
                             <p class="caroussel__text">kunsthal</p>
                             <a href="">en savoir plus</a>
+                        </div>
                         </figure>
                     </div>
                     <div id="ecran-8" class="carrousel__ecran">
                         <figure>
                             <img src="public/img/5184cd654d3e19db430918958e47e24bd70306b7-3072x2712.webp" alt="image ecran 8">
+                            <div>
                             <p class="caroussel__text">boompjes 60-68</p>
                             <a href="">en savoir plus</a>
+                            </div>
                         </figure>
                     </div>
                 </div>

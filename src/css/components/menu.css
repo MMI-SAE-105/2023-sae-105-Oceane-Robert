@@ -7,11 +7,14 @@
     position: fixed;
     top: 0; bottom: 0;
     left: 0; right : 0;
-    background-color: var(--brand-violet);
+    background-color: black;
     font-size: var(--text-xl);
     letter-spacing: var(--letter-spacing);
     transition: all .4s ease-in-out;
-  }
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
   
   .menu--open {
     visibility: visible;
@@ -24,8 +27,17 @@
   }
   
   .menu__item {
-    margin-top: 15%;
+    margin-top: 10%;
   }
+
+  .menu__item::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid white;
+    width: 0%; /* Ajustez cette valeur pour contrôler la longueur de la bordure */
+    margin: auto; /* Centrer la bordure */
+}
+
   
   .menu__link {
     color: white;
@@ -82,5 +94,5 @@
   .header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar,
   .header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::before,
   .header--atTop .menu-btn:not(.menu-btn--open) .menu-btn__bar::after {
-    background-color: var(--gray-black);
+    background-color: black;
   }

@@ -1,0 +1,8 @@
+.information__horaire {
+    border: 1px solid black;
+}
+
+.horaire__title {
+    text-align: center;
+    justify-content: center;
+}
